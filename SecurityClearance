@@ -1,0 +1,35 @@
+
+
+class User:
+    def __init__(self, Name, SecurityClearance): # Create the security user. 
+        self.name = Name
+        self.level = SecurityClearance 
+
+    def readfile(self, file):
+        if self.level != "Top Secret":
+            return "Accessed Denied: Security Level Not High Enough"
+            
+    def writefile(self, file):
+       if self.level != "Top Secret":
+            return "Accessed Denied: Security Level Not High Enough"
+       
+    def createfile(self, file_path, user_input):
+       file_path = "new_file.txt"
+        # Open the file in write mode
+    with open(file_path, 'w') as file:
+        # Write content to the file
+    if self.level == "Top Secret":
+        file.write(user_input)
+    
+    print(f"File '{file_path}' created successfully.")
+        
+
+
+def main(): 
+    joe = User
+
+
+
+
+if __name__ == "__main__":
+    main()
